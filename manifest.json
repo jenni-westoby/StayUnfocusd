@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "StayUnfocusd",
+  "description": "You shouldn't be working! Redirects user away from specified work pages",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "content_scripts":[
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
